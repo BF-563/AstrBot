@@ -1,0 +1,74 @@
+{
+  "platform": [
+    {
+      "id": "default_1905703105",
+      "type": "qq_official",
+      "enable": true,
+      "appid": "1905703105",
+      "secret": "REDACTED",
+      "enable_group_c2c": true,
+      "enable_guild_direct_message": true,
+      "use_markdown": true
+    },
+    {
+      "id": "default_1905308831",
+      "type": "qq_official",
+      "enable": true,
+      "appid": "1905308831",
+      "secret": "REDACTED",
+      "enable_group_c2c": true,
+      "enable_guild_direct_message": true,
+      "use_markdown": true
+    },
+    {
+      "id": "onebot",
+      "type": "aiocqhttp",
+      "enable": true,
+      "ws_reverse_host": "0.0.0.0",
+      "ws_reverse_port": 6199,
+      "ws_reverse_token": ""
+    }
+  ],
+  "platform_settings": {
+    "unique_session": false,
+    "rate_limit": {
+      "time": 60,
+      "count": 30,
+      "strategy": "stall"
+    },
+    "reply_prefix": "",
+    "forward_threshold": 1500,
+    "enable_id_white_list": true,
+    "id_whitelist": [],
+    "id_whitelist_log": true,
+    "wl_ignore_admin_on_group": true,
+    "wl_ignore_admin_on_friend": true,
+    "reply_with_mention": true,
+    "reply_with_quote": true,
+    "path_mapping": [],
+    "segmented_reply": {
+      "enable": false,
+      "only_llm_result": true,
+      "interval_method": "random",
+      "interval": "1.5,3.5",
+      "log_base": 2.6,
+      "words_count_threshold": 150,
+      "split_mode": "regex",
+      "regex": ".*?[。？！~…]+|.+$",
+      "split_words": [
+        "。",
+        "？",
+        "！",
+        "~",
+        "…"
+      ],
+      "content_cleanup_rule": ""
+    },
+    "no_permission_reply": false,
+    "empty_mention_waiting": true,
+    "empty_mention_waiting_need_reply": true,
+    "friend_message_needs_wake_prefix": false,
+    "ignore_bot_self_message": false,
+    "ignore_at_all": true
+  }
+}

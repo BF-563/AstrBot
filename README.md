@@ -59,23 +59,26 @@ docker compose up -d
 2. 配置消息平台（QQ 官方 / OneBot）
 3. 设置人格（可选，从酒馆导入人物卡）
 
-## 📸 界面截图
+## ⚙️ 配置说明
 
-**平台管理** — QQ 官方机器人与 OneBot 适配器运行状态
+仓库内 `config/` 目录保存了机器人的实际配置：
 
-![平台管理](assets/screenshots/platforms.png)
+- `platform.json` — 消息平台配置（QQ 官方机器人 + OneBot，密钥已脱敏为 `REDACTED`）
+- `persona/feng_zhaoyue.md` — 「冯昭月」人格 prompt（Agent + 角色扮演）
+- `characters/Feng_Zhaoyue.json` — 酒馆（SillyTavern）人物卡
 
-**模型提供商** — 已接入 DeepSeek
-
-![模型提供商](assets/screenshots/providers.png)
+> ⚠️ 角色设定包含成人向（18+）角色扮演内容，请酌情处理仓库可见性。
 
 ## 📁 目录结构
 
 ```
 AstrBot/
 ├── docker-compose.yml    # 容器化部署配置
-├── data/                 # 运行时数据（不入库，见 .gitignore）
-└── assets/screenshots/   # 界面截图
+├── config/
+│   ├── platform.json     # 平台配置（密钥已脱敏）
+│   ├── persona/          # 人格 prompt
+│   └── characters/       # 酒馆人物卡
+└── data/                 # 运行时数据（不入库，见 .gitignore）
 ```
 
 ## 📄 许可证
