@@ -1,0 +1,12 @@
+services:
+  astrbot:
+    image: soulter/astrbot:latest
+    container_name: astrbot
+    restart: unless-stopped
+    ports:
+      - "6185:6185"   # WebUI 管理后台
+      - "6199:6199"   # OneBot 反向 WebSocket
+    volumes:
+      - ./data:/AstrBot/data
+    environment:
+      - TZ=Asia/Shanghai
